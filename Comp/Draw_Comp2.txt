@@ -1,0 +1,35 @@
+p = plot(k_nodes, AP_Greedy_number_sizes_spanned, k_nodes, AP_BICC_number_sizes_spanned, ...
+    k_nodes, maxClosenessCentrality_number_sizes_spanned, k_nodes, two_Step_number_sizes_spanned, ...
+    k_nodes, Pagerank_number_sizes_spanned, k_nodes, HIS_number_sizes_spanned, ...
+    k_nodes, pathCount_number_sizes_spanned, k_nodes, Constraint_number_sizes_spanned, ...
+    k_nodes, MaxD_number_sizes_spanned, k_nodes, NOBE_number_sizes_spanned, ...
+    k_nodes, NOBE_GA_number_sizes_spanned);
+xlabel('Top-k SH spanner');
+ylabel("Cumulative number of spanned communities' size");
+% axis([0,100,200000,257600]);
+axis([0,100,250000,257600]);
+l1 = p(1);
+l1.LineWidth = 2;
+l2 = p(2);
+l2.LineWidth = 2;
+l3 = p(3);
+l3.LineWidth = 2;
+l4 = p(4);
+l4.LineWidth = 2;
+l5 = p(5);
+l5.LineWidth = 2;
+l6 = p(6);
+l6.LineWidth = 2;
+l7 = p(7);
+l7.LineWidth = 2;
+l8 = p(8);
+l8.LineWidth = 3;
+l9 = p(9);
+l9.LineWidth = 3;
+l10 = p(10);
+l10.LineWidth = 3;
+l11 = p(11);
+l11.LineWidth = 3;
+lg = legend('AP\_Greedy','AP\_BICC', 'maxCloseness', '2\_Step', 'Pagerank', 'HIS', 'PathCount', 'Constraint', 'MaxD', 'NOBE', 'NOBE\_GA', 'Location', 'southeast');
+
+

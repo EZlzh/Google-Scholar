@@ -1,0 +1,34 @@
+p = plot(k_nodes, AP_Greedy_avg_community_size, k_nodes, AP_BICC_avg_community_size, ...
+    k_nodes, maxClosenessCentrality_avg_community_size, k_nodes, two_Step_avg_community_size, ...
+    k_nodes, Pagerank_avg_community_size, k_nodes, HIS_avg_community_size, ...
+    k_nodes, pathCount_avg_community_size, k_nodes, Constraint_avg_community_size, ...
+    k_nodes, MaxD_avg_community_size, k_nodes, NOBE_avg_community_size, ...
+    k_nodes, NOBE_GA_avg_community_size);
+xlabel('Top-k SH spanner');
+ylabel("Cumulative average community size");
+axis([0,100,2400,17000]);
+l1 = p(1);
+l1.LineWidth = 2;
+l2 = p(2);
+l2.LineWidth = 2;
+l3 = p(3);
+l3.LineWidth = 2;
+l4 = p(4);
+l4.LineWidth = 2;
+l5 = p(5);
+l5.LineWidth = 2;
+l6 = p(6);
+l6.LineWidth = 2;
+l7 = p(7);
+l7.LineWidth = 2;
+l8 = p(8);
+l8.LineWidth = 3;
+l9 = p(9);
+l9.LineWidth = 3;
+l10 = p(10);
+l10.LineWidth = 3;
+l11 = p(11);
+l11.LineWidth = 3;
+lg = legend('AP\_Greedy','AP\_BICC', 'maxCloseness', '2\_Step', 'Pagerank', 'HIS', 'PathCount', 'Constraint', 'MaxD', 'NOBE', 'NOBE\_GA', 'Location', 'southeast');
+
+
