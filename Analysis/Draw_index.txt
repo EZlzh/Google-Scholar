@@ -1,0 +1,27 @@
+p = plot(idx, AP_Greedy_cite, idx, Pagerank_cite, idx, randomT_cite);
+C = [AP_Greedy_cite; Pagerank_cite; randomT_cite]
+xlabel('Top-k selected authors');
+ylabel('Average total number of citations'); 
+set(gca, 'FontSize', 20)
+axis([0,100,0,50000]);
+l1 = p(1);
+l1.LineWidth = 2;
+l1.LineStyle = '--';
+l2 = p(2);
+l2.LineWidth = 2;
+l3 = p(3);
+l3.LineWidth = 2;
+hold on
+p_marker = plot(idx(1:1:10), AP_Greedy_cite(1:1:10), 'x', idx(1:1:10), Pagerank_cite(1:1:10), '.', idx(1:1:10), randomT_cite(1:1:10), 'o');
+l1 = p_marker(1);
+l1.LineWidth = 2;
+l1.MarkerSize = 8;
+l1.MarkerEdgeColor = p(1).Color;
+l2 = p_marker(2);
+l2.LineWidth = 2;
+l2.MarkerSize = 25;
+l2.MarkerEdgeColor = p(2).Color;
+l3 = p_marker(3);
+l3.LineWidth = 2;
+l3.MarkerEdgeColor = p(3).Color;
+lg = legend('SH spanner authors','Opinion authors', 'Randomly selected authors', 'Location', 'southeast');

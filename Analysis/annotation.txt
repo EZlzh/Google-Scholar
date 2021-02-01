@@ -1,0 +1,49 @@
+# msg[][:]
+# 0: File_ID
+    IUwFD9gAAAAJ
+
+# 1: Name
+    M Sohel Rahman
+
+# 2: Institution
+    CSE, BUET
+
+# 3: A list of research area
+    ['Algorithms', 'Bioinformatics', 'Stringology']
+
+# 4: Verified email
+    Verified email at cse.buet.ac.bd
+
+# 5: Web
+    http://teacher.buet.ac.bd/msrahman/
+
+# 6: Photo
+    withphoto
+
+# 7: gs_info: 
+    {% comment %} [179814: 5831 26 43 0 1 1 0]
+    node_ID, total_number_of_citations, h-index, g-index, 
+    academic title(3-professors/2-postdocs/1-students/0-unknown), 
+    computer_science_author?(1-yes,0-no), 
+    biology_author?(1-yes,0-no), 
+    sociology_author?(1-yes,0-no) {% endcomment %}
+#   total_number_of_citations, recent five years, h-index, recent five years, i10-index, recent five years;
+    ['5831', '4077', '26', '21', '135', '86']
+
+# 8: Dict{str_id: coauthor}: (only show verified co-author, maybe the dict here is empty)
+    {'uS3d6IgAAAAJ': 'Tanaeem Moosa', '3rYfNBIAAAAJ': 'M Kaykobad', 'MGijYYAAAAAJ': 'Md Mostofa Akbar', 'IAz0VlsAAAAJ': 'Marcin Kubica', 'MFuTWXYAAAAJ': 'Tomasz Walen', 'gsUSXaQAAAAJ': 'Md. Faizul Bari', 'Zir4fh0AAAAJ': 'Jesun Sahariar Firoz', '11VgFLUAAAAJ': 'Ali Alatabbi', 'GGxzBNYAAAAJ': 'Newton M A Hakim', 'pqbWrO0AAAAJ': 'S M Ferdous', 'xJZm7UsAAAAJ': 'Sumaiya Iqbal', 'CHUQ2l0AAAAJ': 'Inbok Lee', 'emVJFpIAAAAJ': 'Abu Zafar Shahriar', 'G42EigsAAAAJ': 'Tanay Kumar Saha', 'vdCDHcAAAAAJ': 'Manolis Christodoulakis', 'VUKd4nAAAAAJ': 'Md Shahrear Iqbal', 'E6VY4mQAAAAJ': 'Pritom Ahmed', 'p-w4hOUAAAAJ': 'Rifat Shahriyar', 'ymr0PRQAAAAJ': 'Wojciech Rytter', '7Z5zlUgAAAAJ': 'Pavlos Antoniou', 'VWCTS7oAAAAJ': 'Mahmudul Hasan', '_h4lM0gAAAAJ': 'Shampa Shahriyar', 'vIJnC3YAAAAJ': 'Muhammad Ali Nayeem', 'z38jKPsAAAAJ': 'Md Tanvir Islam Aumi', 'r_AbXNsAAAAJ': 'Shihabur Rahman Chowdhury', 'rmbJaoYAAAAJ': 'Alessio Langiu', '2DhrWFgAAAAJ': 'Swakkhar Shatabda', '2UoWYn8AAAAJ': 'Muhibur Rasheed', '2G2UdUgAAAAJ': 'Amit Kumar Dutta', 'YcNGFBQAAAAJ': 'Reaz Ahmed', '0MBzPicAAAAJ': 'Chowdhury Sayeed Hyder'}
+
+# 9: citations per year (correspond with # 10)
+    [17.0, 25.0, 18.0, 16.0, 20.0, 37.0, 22.0, 35.0, 47.0, 52.0, 60.0, 100.0, 105.0, 104.0, 151.0, 199.0, 234.0, 309.0, 389.0, 473.0, 665.0, 904.0, 1152.0, 478.0]
+
+# 10: Year
+    [1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015]
+
+# 11:
+    list of citations 
+
+# 12: 
+    12 to the end (with no citation):
+    many list of papers, like:
+
+    ['Xt3t5HrhCpYC', 'Electrochemical approach of anticancer drugs\u2013DNA interaction', 'S Rauf, JJ Gooding, K Akhtar, MA Ghauri, M Rahman, MA Anwar, ...', 'Journal of pharmaceutical and biomedical analysis 37 (2), 205-217', '189', '2005']
