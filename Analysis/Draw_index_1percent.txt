@@ -1,0 +1,58 @@
+C = [AP_Greedy_cite; Pagerank_cite; Constraint_cite; randomT_cite];
+b = bar(idx2, C);
+
+b1 = b(1)
+b1.LineStyle = 'none'
+b1.BarWidth = 1
+b2 = b(2)
+b2.LineStyle = 'none'
+b2.BarWidth = 1
+b3 = b(3)
+b3.LineStyle = 'none'
+b3.BarWidth = 1
+b4 = b(4)
+b4.LineStyle = 'none'
+b4.BarWidth = 1
+xlabel('Top-k selected authors')
+ylim([0, 50000])
+ylabel('Average total number of citations')
+set(gca, 'FontSize', 20)
+legend('SH spanner authors','Opinion authors', 'LowestConstraint authors', 'Randomly selected authors',  'Location', 'northoutside', 'FontSize', 20, 'Orientation', 'horizontal', 'box', 'off')
+grid on
+set(gca, 'LineWidth', 1, 'GridLineStyle', ':', 'yTick',[0:5000:50000])
+
+
+
+p = plot(idx2, AP_Greedy_gidx, idx2, Pagerank_gidx, idx2, Constraint_gidx, idx2, randomT_gidx);
+C = [AP_Greedy_gidx; Pagerank_gidx; Constraint_gidx; randomT_gidx]
+xlabel('Top-k selected authors');
+ylabel('Average G-Index'); 
+set(gca, 'FontSize', 20)
+axis([0,2000,0,200]);
+l1 = p(1);
+l1.LineWidth = 2;
+l1.LineStyle = '--';
+l2 = p(2);
+l2.LineWidth = 2;
+l3 = p(3);
+l3.LineWidth = 2;
+l4 = p(4);
+l4.LineWidth = 2;
+hold on
+p_marker = plot(idx2(1:1:10), AP_Greedy_gidx(1:1:10), 'x', idx2(1:1:10), Pagerank_gidx(1:1:10), '.', idx2(1:1:10), Constraint_gidx(1:1:10), 'x', idx2(1:1:10), randomT_gidx(1:1:10), 'o');
+l1 = p_marker(1);
+l1.LineWidth = 2;
+l1.MarkerSize = 8;
+l1.MarkerEdgeColor = p(1).Color;
+l2 = p_marker(2);
+l2.LineWidth = 2;
+l2.MarkerSize = 25;
+l2.MarkerEdgeColor = p(2).Color;
+l3 = p_marker(3);
+l3.LineWidth = 2;
+l3.MarkerEdgeColor = p(3).Color;
+l4 = p_marker(4);
+l4.LineWidth = 2;
+l4.MarkerSize = 8;
+l4.MarkerEdgeColor = p(4).Color;
+lg = legend('SH spanner authors','Opinion authors', 'LowestConstraint authors', 'Randomly selected authors', 'Location', 'southeast');

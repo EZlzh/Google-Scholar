@@ -36,7 +36,7 @@ def anatop(msgs):
     cnt = 0
     A = []
     B = []
-    for msg in msgs[:100]:
+    for msg in msgs[:2000]:
         cnt += 1
         # print(msg[3])
         if len(msg) < 4:
@@ -50,7 +50,7 @@ def anatop(msgs):
                 Dictop[item] += 1
             else: 
                 Dictop[item] = 1
-        if cnt % 10 == 0:
+        if cnt % 200 == 0:
             # print('round: ' + str(cnt))
             # print('total:' + str(res))
             # print('set: '+ str(len(Dictop)))
@@ -204,7 +204,7 @@ def anamail(msgs):
 
 
 def dealtop():
-    list_suffix = ['top4000SHS-AP_Greedy.txt', 'top4000-Pagerank.txt', 'top4000-randomT.txt']
+    list_suffix = ['top4000SHS-AP_Greedy.txt', 'top4000-Pagerank.txt', 'top4000-randomT.txt', 'top4000-Constraint.txt']
     # list_suffix = ['top4000SHS-AP_Greedy.txt'] 
     Adic = {}
     AA = np.array([])
@@ -232,11 +232,11 @@ def dealtop():
     Adic[str('set_B')] = BB
 
     idx = []
-    for i in range(0,100,10):
-        i += 10
+    for i in range(0,2000,200):
+        i += 200
         idx.append(i)
     # print(idx)
-    Adic['idx'] = idx 
+    Adic['idx2'] = idx 
     sio.savemat('./Ana-topic-test1.mat', Adic)
 
 def dealmail():
@@ -273,7 +273,7 @@ def anaindex(Orinodes, GSDic):
     Mgidx = []
     Maca = []
     Dicaca = {}
-    for node in Orinodes[:100]:
+    for node in Orinodes[:2000]:
         citations.append(int(GSDic[node][0]))
         hidx.append(int(GSDic[node][1]))
         gidx.append(int(GSDic[node][2]))
@@ -285,7 +285,7 @@ def anaindex(Orinodes, GSDic):
             Dicaca[title] = 1
         # break
         cnt += 1
-        if cnt % 10 == 0:
+        if cnt % 200 == 0:
             Mcitations.append(mean(citations))
             Mhidx.append(mean(hidx))
             Mgidx.append(mean(gidx))
@@ -299,7 +299,7 @@ def anaindex(Orinodes, GSDic):
         
 
 def dealindex():
-    list_suffix = ['top4000SHS-AP_Greedy.txt', 'top4000-Pagerank.txt', 'top4000-randomT.txt']
+    list_suffix = ['top4000SHS-AP_Greedy.txt', 'top4000-Pagerank.txt', 'top4000-randomT.txt', 'top4000-Constraint.txt']
     GSDic = {}
     with open(remote_path+idx_suffix, 'r') as f: 
         lines = f.readlines()
@@ -319,11 +319,11 @@ def dealindex():
         Idic[str(cur_name+'_gidx')] = gidx
 
     idx = []
-    for i in range(0,100,10):
-        i += 10
+    for i in range(0,2000,200):
+        i += 200
         idx.append(i)
         # print(i)
-    Idic['idx'] = idx 
+    Idic['idx2'] = idx 
     sio.savemat('./Ana-index-test1.mat', Idic)
 
 def deal_dic(str):
@@ -532,7 +532,7 @@ def dealcoan():
 
 if __name__ == '__main__':
     
-    # dealtop()
+    dealtop()
     # dealmail()
     # dealindex()
-    dealcoan()
+    # dealcoan()

@@ -1,0 +1,33 @@
+p = plot(idx2, AP_Greedy_hidx, idx2, Pagerank_hidx, idx2, Constraint_hidx, idx2, randomT_hidx);
+C = [AP_Greedy_hidx; Pagerank_hidx; Constraint_hidx; randomT_hidx]
+xlabel('Top-k selected authors');
+ylabel('Average H-Index'); 
+set(gca, 'FontSize', 20)
+axis([0,2000,0,200]);
+l1 = p(1);
+l1.LineWidth = 2;
+l1.LineStyle = '--';
+l2 = p(2);
+l2.LineWidth = 2;
+l3 = p(3);
+l3.LineWidth = 2;
+l4 = p(4);
+l4.LineWidth = 2;
+hold on
+p_marker = plot(idx2(1:1:10), AP_Greedy_hidx(1:1:10), 'x', idx2(1:1:10), Pagerank_hidx(1:1:10), '.', idx2(1:1:10), Constraint_hidx(1:1:10), 'x', idx2(1:1:10), randomT_hidx(1:1:10), 'o');
+l1 = p_marker(1);
+l1.LineWidth = 2;
+l1.MarkerSize = 8;
+l1.MarkerEdgeColor = p(1).Color;
+l2 = p_marker(2);
+l2.LineWidth = 2;
+l2.MarkerSize = 25;
+l2.MarkerEdgeColor = p(2).Color;
+l3 = p_marker(3);
+l3.LineWidth = 2;
+l3.MarkerEdgeColor = p(3).Color;
+l4 = p_marker(4);
+l4.LineWidth = 2;
+l4.MarkerSize = 8;
+l4.MarkerEdgeColor = p(4).Color;
+lg = legend('SH spanner authors','Opinion authors', 'LowestConstraint authors', 'Randomly selected authors', 'Location', 'southeast');
