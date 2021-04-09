@@ -1,0 +1,80 @@
+[f1,x1]=ecdf(AP_Greedy_JS);
+[f2,x2]=ecdf(Pagerank_JS);
+[f3,x3]=ecdf(randomT_JS);
+p = plot(x1, f1, x2, f2, x3, f3);
+xlabel('Social enrichment JS-divergence');
+ylabel('CDF of top 1% authors'); 
+set(gca, 'FontSize', 20)
+l1 = p(1);
+l1.LineWidth = 3;
+l2 = p(2);
+l2.LineWidth = 3;
+l3 = p(3);
+l3.LineWidth = 3;
+lg = legend('SH spanner authors','Opinion authors', 'Randomly selected authors', 'Location', 'northwest');
+
+
+
+[f1,x1]=ksdensity(AP_Greedy_JS);
+[f2,x2]=ksdensity(Pagerank_JS);
+[f3,x3]=ksdensity(randomT_JS);
+p = plot(x1, f1, x2, f2, x3, f3);
+xlabel('Social enrichment JS-divergence');
+xlim([0,1])
+ylabel('PDF of top 1% authors'); 
+set(gca, 'FontSize', 20)
+l1 = p(1);
+l1.LineWidth = 2;
+l1.LineStyle = '-.';
+l2 = p(2);
+l2.LineWidth = 2;
+l2.LineStyle = '-.';
+l3 = p(3);
+l3.LineWidth = 2;
+l3.LineStyle = '-.';
+lg = legend('SH spanner authors','Opinion authors', 'Randomly selected authors', 'Location', 'northwest');
+
+
+
+subplot(1,2,1)
+[f1,x1]=ksdensity(AP_Greedy_JS);
+histogram(AP_Greedy_JS,10,'Normalization','pdf');
+hold on;
+p = plot(x1, f1);
+xlabel('Social enrichment JS-divergence');
+xlim([0,1])
+ylim([0,4.5])
+l1 = p(1);
+l1.LineWidth = 2;
+l1.LineStyle = '-.';
+ylabel('PDF of top 1% SHS authors'); 
+set(gca, 'FontSize', 20)
+axis square;
+
+subplot(1,2,2)
+[f2,x2]=ksdensity(Pagerank_JS);
+histogram(Pagerank_JS,10,'Normalization','pdf');
+hold on;
+p = plot(x2, f2);
+xlabel('Social enrichment JS-divergence');
+xlim([0,1])
+ylim([0,4.5])
+l1 = p(1);
+l1.LineWidth = 2;
+l1.LineStyle = '-.';
+ylabel('PDF of top 1% opinion authors'); 
+set(gca, 'FontSize', 20)
+axis square;
+
+subplot(1,3,3)
+[f3,x3]=ksdensity(randomT_JS);
+histogram(randomT_JS,10,'Normalization','pdf');
+hold on;
+p = plot(x3, f3);
+xlabel('Social enrichment JS-divergence');
+xlim([0,1])
+l1 = p(1);
+l1.LineWidth = 2;
+l1.LineStyle = '-.';
+ylabel('PDF of top 1% random authors'); 
+set(gca, 'FontSize', 20)
