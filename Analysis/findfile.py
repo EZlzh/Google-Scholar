@@ -7,7 +7,7 @@ import random
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)
 
-remote_path = '/Users/apple/Documents/gs_info/'
+remote_path = '/home/nds/GScholar/gs_info/'
 dic_suffix = 'Dictnode.txt'
 file_suffix = 'gs_id.txt'
 Dicfile = remote_path + dic_suffix

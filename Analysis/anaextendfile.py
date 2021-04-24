@@ -5,15 +5,15 @@ import sys
 import scipy.io as sio 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)
-import extractfile
-import findfile
+from Analysis import extractfile
+from Analysis import findfile
 import numpy as np
 import json
 import math
 from numpy import *
 import ast
-gs_result_path = '/Users/apple/Documents/gs_result/'
-remote_path = '/Users/apple/Documents/gs_info/'
+gs_result_path = '/home/nds/GScholar/gs_result/'
+remote_path = '/home/nds/GScholar/gs_info/'
 idx_suffix = 'gs_info.txt'
 CCtest = {}
 

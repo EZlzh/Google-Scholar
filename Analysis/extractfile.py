@@ -6,9 +6,9 @@ import json
 import random
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)
-import findfile
+from Analysis import findfile
 
-gs_result_path = '/Users/apple/Documents/gs_result/'
+gs_result_path = '/home/nds/GScholar/gs_result/'
 findfile.prefind()
 
 def extract_info(prefix, curfix):
